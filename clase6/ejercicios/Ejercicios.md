@@ -1,14 +1,18 @@
-# Ejercicios para prácticar
+# Ejercicios para practicar
 
-1. En los ejercicios para realizar de clase 3, vimos el dataset `winequality-red.csv`, el cual consiste en datos de 
-vinos rojos basados en datos físico-químicos y una metrica de calidad de vino. Más info en [Kaggle](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009). Usando el 
-mismo dataset y basando en el estudio de variables anteriormente realizado, eligiendo algún método de ensamble visto de
-clase:
-   1. Construya un módelo de regresión. Juegue con las variables usando algún método de búsqueda de hiper-parámetros si
-   hace falta.
-   2. Usando la métrica de evaluación del modelo del SVR y el arbol, compare los resultados obtenidos con respecto a los
-   anteriormente.
-   3. ¿Cuál fue el mejor modelo en métricas? Y de facilidad de entender los resultados? Discuta los resultados.
+1. Use el dataset [weatherAUS](https://www.kaggle.com/datasets/sandhyapalaniappan/rainfall-prediction-dataset-cleaned-weatheraus). El dataset contiene información climática diaria y una variable binaria `RainTomorrow` indicando si llovió al día siguiente.
 
-2. Continuando con el ejercicio de la clase 3 del dataset `UCI_Credit_Card.csv`. Incorpore al estudio de los modelos 
-el módelo XGBoost y repita las evaluaciones que se hicieron con los clasificadores. Discuta los resultados obtenidos.
+   1. Cargue el dataset en un DataFrame de Pandas, seleccione algunas variables relevantes (temperatura, humedad, presión, etc.) y realice una limpieza básica de datos faltantes.
+   2. Separe en entrenamiento y testeo (80 % – 20 %).
+   3. Entrene dos modelos de clasificación binaria: **Logistic Regression** y **Random Forest**.
+   4. Obtenga las probabilidades predichas y grafique los **histogramas** de estas probabilidades para ambos modelos.
+   5. Dibuje las **curvas de calibración** usando `CalibrationDisplay`.
+   6. Evalúe Accuracy, Brier Score y Log-loss, y discuta brevemente cuál modelo parece estar mejor calibrado.
+
+2. Usando el mismo dataset `weatherAUS`:
+
+   1. Entrene un modelo **GaussianNB** con las mismas variables.
+   2. Grafique el histograma de probabilidades y la curva de calibración del modelo sin calibrar.
+   3. Calibre el modelo usando `CalibratedClassifierCV` con los métodos `"sigmoid"` e `"isotonic"`.
+   4. Dibuje las curvas de calibración de ambos modelos calibrados y compare el Brier Score con el modelo original.
+   5. Discuta brevemente cuál método de calibración funcionó mejor y si el Accuracy cambió luego de calibrar.

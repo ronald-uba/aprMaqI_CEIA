@@ -1,7 +1,7 @@
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-# Aprendizaje de Maquina I
-Este repositorio contiene el material de clases (presentaciones, ejercicios y notebooks) para Aprendizaje de Maquina I (CEIA - FIUBA). 
+# Aprendizaje de Máquina
+Este repositorio contiene el material de clases (presentaciones, ejercicios y notebooks) para Aprendizaje de Maquina (CEIA - FIUBA). 
 
 Para revisar los criterios de aprobación, ver el [documento correspondiente](CriteriosAprobacion.md).
 
@@ -18,7 +18,7 @@ Para revisar los criterios de aprobación, ver el [documento correspondiente](Cr
 ### Requerimientos
 * Lenguaje de Programación
     * Python >=3.10
-    * Poetry (>=1.8) / Pip / Conda para instalar librerías
+    * uv / Pip / Conda para instalar librerías
 * Librerías
     * Matplotlib
     * Numpy
@@ -66,22 +66,24 @@ Este repositorio contiene un archivo `pyproject.toml` para instalar las dependen
 
 ### [Clase 5](clase5/README.md)
 
-* Redes Neuronales
-* Perceptrones y neuronas sigmoideas
-* Redes Feed-Forward
-
-### [Clase 6](clase6/README.md)
-
 * Métodos de ensamble
 * Boosting, Bagging y Bosques Aleatorios
 * Feature Importance
+
+### [Clase 6](clase6/README.md)
+
+* Calibración de modelos.
+* Discriminación vs. calibración.
+* Métodos de calibración.
 
 ### [Clase 7](clase7/README.md)
 
 * Aprendizaje no supervisado
 * Métodos de clustering
 * K-Means
-* Métodos de reducción de dimensionalidad
+* Modelo de mixtura Gaussiana
+* Clustering jerárquico
+
 
 ## Bibliografía
 - Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python - Peter Bruce (Ed. O’Reilly)
